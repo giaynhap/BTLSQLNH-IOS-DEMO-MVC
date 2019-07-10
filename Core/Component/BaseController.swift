@@ -9,8 +9,9 @@
 import UIKit
 
 class BaseController{
-
+  
     func loaded(_ view:Any){
         
     }
+     
 }

@@ -21,8 +21,7 @@ class LoginViewController: BaseView<LoginController> {
         btnLogin.addTarget(self, action: #selector(LoginViewController.onClickLogin), for:.touchDown  )
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true;
-         
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     @objc func onClickLogin(){
         
@@ -36,7 +35,10 @@ class LoginViewController: BaseView<LoginController> {
         self.controller!.login(account, password)
       
     }
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
     
     
     

@@ -13,11 +13,17 @@ import UIKit
  
     override func viewDidLoad() {
         controller = DashboardController();
+        var drawerView =  DrawerViewController(name: "Drawer");
+        self.addDrawer(drawerView);
         super.viewDidLoad();
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true
+        super.viewWillAppear(animated);
+        
     }
     
 
+    @IBAction func onPress(_ sender: Any) {
+           self.drawer!.toggle();
+    }
 }
