@@ -37,7 +37,7 @@ class BaseView<T>: UIViewController {
         drawerView.view.translatesAutoresizingMaskIntoConstraints = false;
         let window = UIApplication.shared.keyWindow!
  
-        NSLayoutConstraint(item: drawerView.view, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 200).isActive = true
+        NSLayoutConstraint(item: drawerView.view, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 250).isActive = true
         NSLayoutConstraint(item: drawerView.view, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: window.frame.height ).isActive = true
 
         //shadow
@@ -48,7 +48,7 @@ class BaseView<T>: UIViewController {
         
        
         self.view.addSubview(drawerView.view);
-        drawerView.view.transform = CGAffineTransform.identity.translatedBy(x:-200, y: 0)
+        drawerView.view.transform = CGAffineTransform.identity.translatedBy(x:-250, y: 0)
         self.drawerView = drawerView;
         
         drawer = DrawerController();
